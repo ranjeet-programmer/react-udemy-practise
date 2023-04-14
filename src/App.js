@@ -1,7 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import ExpenseItem from "./components/ExpenseItem";
-
+import Expenses from "./components/Expenses";
 function App() {
   const expenses = [
     {
@@ -38,15 +38,7 @@ function App() {
   return (
     <div>
       <h1> Let's Start It</h1>
-      {expenses.map((expense) => {
-        return (
-          <ExpenseItem
-            title={expense.title}
-            amount={expense.amount}
-            date={expense.date}
-          />
-        );
-      })}
+      <Expenses expenses={expenses} />
     </div>
   );
 }
